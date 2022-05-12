@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Encontre no Google</h3>
+    <form action="http://www.google.com/search" method="get">
+        <label for="query">o que deseja pesquisar?</label>
+        <input for="query" type="email" name="q" placeholder="Digite aqui" required="email">
+        <!--o tipo do input pode variar de acordo com a necessidade do dado desejado-->
+        <!--required mostras que é preciso entrar com dados no input especificado
+            Pode ser dos tipos: email, number-->
+        <input type="submit" value="aperta aqui">
+    </form>
+    <!----------------------testando número------------------>
+    <form action="http://www.google.com/search" method="get">
+        <label for="query">o que deseja pesquisar?</label>
+        <input for="query" type="number" name="q" placeholder="Digite aqui" required="email" min="10" max="12">
+
+        <input type="submit" value="aperta aqui">
+    </form>
+    <!----------------Testando o autocomplete----------------->
+    <form action="/action_page.php" autocomplete="on">
+        <!-- outro exemplo de validação-->
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" autocomplete="off"><br><br>
+        <input type="submit">
+    </form>
+    <!----------------------testando lista------------------>
+    <label for="browser">Choose your browser from the list:</label>
+    <!--selecione a opção-->
+    <input list="browsers" name="browser" id="browser">
+    <!--passa a lista e da um nome e um id-->
+
+    <datalist id="browsers">
+        <!--indica as opções disponíveis-->
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+</body>
+
+</html>
+<!--Pesquisar osbre autocomplete-->
