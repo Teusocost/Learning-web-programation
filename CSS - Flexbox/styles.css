@@ -1,0 +1,66 @@
+
+body{
+    padding-bottom:400px ;
+}
+
+.container{
+    background-color: #eee;
+    border: 2px solid red;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+    /*Alinhamento horizontal*/
+    display: flex;
+    justify-content: space-around; /*define como os itens serão organizados dentro da flex*/ 
+    /*Alinhamento vertical*/
+    align-items: center;
+    /*Limitantes*/
+    flex-wrap: wrap;
+}
+.item{
+    background-color: rgb(124, 163, 163);
+    border: 2px solid rgb(16, 27, 150);
+    height: 50px;
+    width: 50px;
+}
+
+/*------Segundo quadrado red-------------*/
+.box{
+    background-color: rgb(124, 163, 163);
+    border: 2px solid rgb(16, 27, 150);
+    height: 50px;
+    flex-basis: 50px;
+    flex-grow: 1; /*Tamanho do item com relação aos outros*/
+    flex-shrink: 1; /*redução do item (contrario do grow*/
+
+    /*grow shrink e basis podem ser substituidos por: flex*/
+    flex: 1 1 50px;
+}
+
+/*
+
+#item-1{
+    flex-grow:2 
+}
+#item-2,
+#item-3{
+    flex-grow:1 
+}
+
+#item-2{
+    flex-basis: 100px;
+}
+#item-3{
+    flex-shrink: 3;
+}
+*/
+
+#item-1{
+order: 3;
+}
+#item-2{
+order: 1;
+}
+#item-3{
+order: 2;
+}
